@@ -155,6 +155,11 @@ Then we built a decision tree model with cross validation, but it had only accur
 
 Lastly we tried building a non-linear complex model that used bagging - RandomForest model. This model exceeded all expectations, because it accomplished accuracy of 100%  on training and 99,5% accuracy on validation dataset.
 
+## OOB prediction estimate
+
+Given that we have 100% accuracy on Training dataset and 99,5% accuracy on Validation dataset, we can estimate very high accuracy also on OOB samples as we can see fom Validation Prediction Confidence interval: 95% CI : (0.9927, 0.9966).
+Our accuracy should be therefore higher than 99%.
+
 ## Applying the Best Model on Test Dataset
 
 There are a few missing values in test dataset for fields that are filled in training dataset.

@@ -439,6 +439,10 @@ confusionMatrix(RF_Validation1, validation$classe)</code></pre>
 <p>Then we built a decision tree model with cross validation, but it had only accuracy of 49% on training set and 48% on validation set.</p>
 <p>Lastly we tried building a non-linear complex model that used bagging - RandomForest model. This model exceeded all expectations, because it accomplished accuracy of 100% on training and 99,5% accuracy on validation dataset.</p>
 </div>
+<div id="oob-prediction-estimate" class="section level2">
+<h2>OOB prediction estimate</h2>
+<p>Given that we have 100% accuracy on Training dataset and 99,5% accuracy on Validation dataset, we can estimate very high accuracy also on OOB samples as we can see fom Validation Prediction Confidence interval: 95% CI : (0.9927, 0.9966). Our accuracy should be therefore higher than 99%.</p>
+</div>
 <div id="applying-the-best-model-on-test-dataset" class="section level2">
 <h2>Applying the Best Model on Test Dataset</h2>
 <p>There are a few missing values in test dataset for fields that are filled in training dataset. We could either remove all such fields from the model and build a model without them or just fill 0 value and hope that they are not so important.</p>
